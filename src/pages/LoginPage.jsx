@@ -40,7 +40,7 @@ export function LoginPage() {
     const errors = {};
     if (!identifier.trim()) errors.identifier = 'هذا الحقل مطلوب';
     if (!password) errors.password = 'هذا الحقل مطلوب';
-    else if (password.length < 8) errors.password = 'كلمة المرور يجب أن تكون 8 أحرف على الأقل';
+    else if (password.length < 6) errors.password = 'كلمة المرور يجب أن تكون 6 أحرف على الأقل';
     setFieldErrors(errors);
     return Object.keys(errors).length === 0;
   }
